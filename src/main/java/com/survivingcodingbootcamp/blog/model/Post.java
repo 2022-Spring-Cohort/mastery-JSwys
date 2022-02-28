@@ -1,6 +1,7 @@
 package com.survivingcodingbootcamp.blog.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Post {
@@ -12,6 +13,9 @@ public class Post {
     private Topic topic;
     @Lob
     private String content;
+
+    @ManyToMany(mappedBy = "posts")
+    private Collection<Hashtag> hashtags;
 
     protected Post() {
     }
@@ -36,6 +40,10 @@ public class Post {
 
     public String getContent() {
         return content;
+    }
+
+    public Collection<Hashtag> getHashtags(){
+        return hashtags;
     }
 
     @Override
@@ -68,5 +76,8 @@ public class Post {
         result = 31 * result + (topic != null ? topic.hashCode() : 0);
         result = 31 * result + (content != null ? content.hashCode() : 0);
         return result;
+    }
+
+    public void add(Post post) {
     }
 }

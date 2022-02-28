@@ -15,6 +15,9 @@ h1{
 h2{
     color:var(--light-highlight)
 }
+h3{
+    color:var(--light-highlight)
+}
 .container{
     background-color: var(--light-background);
 }

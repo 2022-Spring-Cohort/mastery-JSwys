@@ -29,6 +29,11 @@
                 </p>
             </section>
         </main>
+        <section class="hashtag__form" action= "hashtag"  th:action="'/post/' + ${post.id}"  method="POST">
+            <h3>Add A Hashtag</h3>
+            <input class = "hashtag__input" type="text">
+            <input class="hashtag__submit" type="submit">
+        </section>
     </div>
 
 </body>

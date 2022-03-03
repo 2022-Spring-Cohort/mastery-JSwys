@@ -31,6 +31,17 @@
                 </div>
             </nav>
         </section>
+        <section class = "main-content__newPost">
+            <form class="post__form" th:action="'/topics/' + ${topic.id} + '/addPost'"  method="POST">
+                <h3>Add a Post</h3>
+                <input class = "post__submit" name = "title" placeholder = "Post title..." type="text">
+                <input class = "post__submit" name = "author" placeholder = "Post author..." type="text">
+                <div class = "bottom__box">
+                    <textarea class = "post__submit" name = "content" placeholder = "Post content..." rows="5" cols="120" maxlength = "600"></textarea>
+                    <input class="post__submit" type="submit">
+                </div>
+            </form>
+        </section>
     </main>
 </div>
 </body>

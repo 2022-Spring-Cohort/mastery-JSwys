@@ -15,6 +15,9 @@ h1{
 h2{
     color:var(--light-highlight)
 }
+h3{
+    color:var(--light-highlight)
+}
 .container{
     background-color: var(--light-background);
 }
@@ -41,4 +44,16 @@ a{
 }
 a:hover{
     color: var(--light-highlight);
+}
+
+.hashtagList {
+    list-style-type: none;
+}
+
+.allHashtagList {
+    list-style-type: none;
+}
+
+.postList {
+    list-style-type: none;
 }

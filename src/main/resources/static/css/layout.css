@@ -24,4 +24,49 @@
         margin: 15px auto;
     }
 
+.main-content__post {
+    padding: 10px;
+}
+
+.post__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.post__submit {
+    margin: 10px;
+    padding: 5px;
+}
+
+.bottom__box {
+    display: flex;
+    align-items: flex-end;
+}
+
+.hashtag__submit {
+    margin: 10px;
+    padding: 5px;
+}
+
+.main-content__hashtag {
+    padding: 10px;
+}
+
+.main-content__hashtags {
+    padding: 10px;
+}
+
+.main-content__addHashtag {
+    padding: 10px;
+}
+
+.main-content__topic {
+    padding: 10px;
+}
+
+.main-content__newPost {
+    padding: 10px;
+}
+
 }

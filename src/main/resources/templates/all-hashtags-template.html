@@ -27,10 +27,12 @@
 <!--            <p th:text="${post.content}" class="post__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque blanditiis, aut quae fuga id quis ut.-->
 <!--                Eligendi necessitatibus blanditiis officia, odio deleniti natus molestiae fugiat ex quod vel aliquam illum.-->
 <!--            </p>-->
-            <a class="hashtag__item" th:each="hashtag:${hashtags}" th:href="'/hashtag/'+${hashtag.id}">
-
-                <p class = "hashtag__item" th:text="${hashtag.body}" th:href="'/hashtag/'+${hashtag.id}"></p>
-            </a>
+            <h3>All Hashtags</h3>
+            <ul class = "allHashtagList" th:each="hashtag:${hashtags}">
+                <li>
+                    <a class="hashtag__item" th:text="${hashtag.body}" th:href="'/hashtags/'+${hashtag.id}"></a>
+                </li>
+            </ul>
 
         </section>
     </main>

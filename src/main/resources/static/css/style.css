@@ -45,3 +45,15 @@ a{
 a:hover{
     color: var(--light-highlight);
 }
+
+.hashtagList {
+    list-style-type: none;
+}
+
+.allHashtagList {
+    list-style-type: none;
+}
+
+.postList {
+    list-style-type: none;
+}

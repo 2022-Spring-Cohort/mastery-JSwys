@@ -28,7 +28,7 @@ public class HashtagController {
         return "all-hashtags-template";
     }
 
-    @RequestMapping(params = "hashtag", value="/post/{id}", method = RequestMethod.POST)
+    @PostMapping("/posts/{id}/addHashtag")
     public String addHashtagToPost(@PathVariable long id, @RequestParam String hashtag) {
         Optional<Post> tempPost = postRepo.findById(id);
         Optional<Hashtag> hashtagToAdd = hashtagRepo.findByBodyIgnoreCase(hashtag);
@@ -44,7 +44,13 @@ public class HashtagController {
             tempHashtag.addPost(tempPost.get());
             hashtagRepo.save(tempHashtag);
         }
-        return "redirect:/post/" + id;
+        return "redirect:/posts/" + id;
+    }
+
+    @RequestMapping("/hashtags/{id}")
+    public String singleHashtagView(@PathVariable long id, Model model) {
+        model.addAttribute("hashtag", hashtagRepo.findById(id).get());
+        return "single-hashtag-template";
     }
 
 }

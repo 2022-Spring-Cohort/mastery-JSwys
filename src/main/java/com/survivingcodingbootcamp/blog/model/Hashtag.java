@@ -38,6 +38,6 @@ public class Hashtag {
     }
 
     public void addPost(Post post) {
-        post.add(post);
+        posts.add(post);
     }
 }

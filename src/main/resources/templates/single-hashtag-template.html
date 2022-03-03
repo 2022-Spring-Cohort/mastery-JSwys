@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title Hashtag Posts</title>
+    <title> Hashtag Posts </title>
     <link rel="icon" href="/assets/icon.png">
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/layout.css" />
@@ -21,12 +21,12 @@
     </header>
     <main class="main-content">
         <section class="main-content__post hashtag">
-<!--            <h3 class="post__topic-title main-content__topic-title"><a th:text="${post.topic.name}" th:href="'/topics/'+${post.topic.id}" class="main-content__topic-link post__topic-link">Topic</a>-->
-<!--            </h3>-->
-<!--            <h2 th:text="${post.title}" class="post__title main-content__topic-title">Post Title</h2>-->
-<!--            <p th:text="${post.content}" class="post__content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque blanditiis, aut quae fuga id quis ut.-->
-<!--                Eligendi necessitatibus blanditiis officia, odio deleniti natus molestiae fugiat ex quod vel aliquam illum.-->
-<!--            </p>-->
+            <h2 th:text= "'Posts tagged as ' + ${hashtag.body}" class="hashtag__title main-content__title">Hashtag</h2>
+            <ul class = "postList">
+                <li th:each="post: ${hashtag.posts}">
+                    <a th:text="${post.title}" th:href="'/posts/'+${post.id}" href="#"></a>
+                </li>
+            </ul>
         </section>
     </main>
 </div>
